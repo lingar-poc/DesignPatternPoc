@@ -10,6 +10,8 @@ namespace DesignPatternPoc
     {
         public static void Main(string[] args)
         {
+
+            Console.WriteLine("Design patterns");
         }
     }
 }
