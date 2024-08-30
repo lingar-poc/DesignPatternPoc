@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace c_sharp_apps_Akiva_Cohen.bank_app
+namespace DesignPatternPoc.app
 {
     public class Account
     {
@@ -13,11 +13,38 @@ namespace c_sharp_apps_Akiva_Cohen.bank_app
         private int overdraft;
         private const double MAX_OVERDRAFT = 90_000;
 
-        public Account(Owner owner, double balance, int overdraft)
+        private static Account myInstance = null;
+
+        //private Account(Owner owner, double balance, int overdraft)
+        //{
+        //    this.owner = owner;
+        //    this.balance = balance;
+        //    SetOverdraft(overdraft);
+        //}
+
+        public static Account GetInstance()
+        {
+
+            //return myInstance == null ? new Account() : myInstance;
+
+            if(myInstance == null)
+            {
+                myInstance = new Account();
+            }
+            return myInstance;
+
+        }
+
+
+        //Private constructor - blocking public access to this class 
+        private Account() { }
+        public void SetBalance(double balance)
+        {
+            this.balance = balance;
+        }
+        public void SetOwner(Owner owner)
         {
             this.owner = owner;
-            this.balance = balance;
-            SetOverdraft(overdraft);
         }
 
         public Owner GetOwner() { return owner; }
