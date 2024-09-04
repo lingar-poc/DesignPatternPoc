@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DesignPatternPoc.app;
 
 namespace c_sharp_apps_Akiva_Cohen.bank_app
 {
-    public class IsrealAccount
+    public class IsrealAccount: IAccount
     {
         private Owner owner;
         private double balance;
@@ -41,6 +42,21 @@ namespace c_sharp_apps_Akiva_Cohen.bank_app
         public override string ToString()
         {
             return $"Account: [owner= {owner}, balance = {balance}, overdraft = {overdraft}]";
+        }
+
+        public void Withdraw(int amount)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Deposit(int amount)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool TrasferMoney(int amount, IAccount other)
+        {
+            throw new NotImplementedException();
         }
 
         //public void Deposit(double amount) { this.balance += amount; }

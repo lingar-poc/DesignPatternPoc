@@ -7,7 +7,7 @@ using c_sharp_apps_Akiva_Cohen.bank_app;
 
 namespace DesignPatternPoc.app
 {
-    public class UsaAccount
+    public class UsaAccount: IAccount
     {
 
         public void UniqueForUSA()
@@ -42,6 +42,21 @@ namespace DesignPatternPoc.app
         public override string ToString()
         {
             return $"Account: [owner= {owner}, balance = {balance}, overdraft USA = {overdraft}]";
+        }
+
+        public void Withdraw(int amount)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Deposit(int amount)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool TrasferMoney(int amount, IAccount other)
+        {
+            throw new NotImplementedException();
         }
 
         //public void Deposit(double amount) { this.balance += amount; }
