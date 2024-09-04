@@ -3,17 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using c_sharp_apps_Akiva_Cohen.bank_app;
 
-namespace c_sharp_apps_Akiva_Cohen.bank_app
+namespace DesignPatternPoc.app
 {
-    public class Account
+    public class UsaAccount
     {
+
+        public void UniqueForUSA()
+        {
+            Console.WriteLine("Let's imagine that we have many of things that unique to USA in the accoutn.");
+        }
+
         private Owner owner;
         private double balance;
         private int overdraft;
         private const double MAX_OVERDRAFT = 90_000;
 
-        public Account(Owner owner, double balance, int overdraft)
+        public UsaAccount(Owner owner, double balance, int overdraft)
         {
             this.owner = owner;
             this.balance = balance;
@@ -34,7 +41,7 @@ namespace c_sharp_apps_Akiva_Cohen.bank_app
 
         public override string ToString()
         {
-            return $"Account: [owner= {owner}, balance = {balance}, overdraft = {overdraft}]";
+            return $"Account: [owner= {owner}, balance = {balance}, overdraft USA = {overdraft}]";
         }
 
         //public void Deposit(double amount) { this.balance += amount; }
