@@ -16,12 +16,17 @@ namespace DesignPatternPoc.app
         private double price;
         private string description;
         private bool inStock;
+        private IProductsRequiresFactory productsRequiresFactory;
 
         public string Name { get => name; set => name = value; }
         public double Price { get => price; set => price = value; }
         public string Description { get => description; set => description = value; }
         public bool InStock { get => inStock; set => inStock = value; }
 
+        public Product(IProductsRequiresFactory productsRequiresFactory)
+        {
+            this.productsRequiresFactory = productsRequiresFactory;
+        }
         public override string ToString()
         {
             return $"Product:[name = {name}, price = {price}" +

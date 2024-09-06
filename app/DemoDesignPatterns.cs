@@ -11,6 +11,9 @@ namespace DesignPatternPoc.app
         public static void Demo()
         {
             Console.WriteLine("Demo design pattern");
+
+            MilkProductsRequiresFactory m = new MilkProductsRequiresFactory();
+            MilkProduct milkProduct = new MilkProduct(m);
         }
     }
 }

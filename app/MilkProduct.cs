@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace DesignPatternPoc.app
 {
-    public class SKU : ISku
+    public class MilkProduct : Product
     {
 
-        //Generate SKU .... 
-        public string GenerateSKU()
+        public MilkProduct(IProductsRequiresFactory productsRequiresFactory) : base(productsRequiresFactory)
         {
-            throw new NotImplementedException();
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatternPoc.app
 {
-    public class Weight : IWeight
+    public class BasicWeight : IWeight
     {
         public int GetWeight()
         {

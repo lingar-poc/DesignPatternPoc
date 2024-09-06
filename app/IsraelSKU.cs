@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace DesignPatternPoc.app
 {
-    public class ExpirationDate : IExpiration
+    public class IsraelSKU : ISku
     {
-        public void CalcaulateExpiration()
+
+        //Generate SKU .... 
+        public string GenerateSKU()
         {
             throw new NotImplementedException();
         }
