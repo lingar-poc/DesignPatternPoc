@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace DesignPatternPoc.app
 {
+
+    //SKU, Expiration Date, Weight
     public class Product
     {
+
+
         private string name;
         private double price;
         private string description;
