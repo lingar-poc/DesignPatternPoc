@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace c_sharp_apps_Akiva_Cohen.bank_app
 {
-    public class Account
+    public class Account : ICloneable
     {
         private Owner owner;
         private double balance;
@@ -42,6 +42,18 @@ namespace c_sharp_apps_Akiva_Cohen.bank_app
         public override string ToString()
         {
             return $"Account: [owner= {Owner}, balance = {Balance}, overdraft = {Overdraft}]";
+        }
+
+        public object Clone()
+        {
+            Account account = new Account();
+            account.owner = owner;
+            account.balance = balance;
+            //return account;
+            return new Account(owner, balance, overdraft);  
+
+
+            //throw new NotImplementedException();
         }
 
         //public void Deposit(double amount) { this.balance += amount; }

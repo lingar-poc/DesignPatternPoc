@@ -28,6 +28,14 @@ namespace DesignPatternPoc.app
             owner.FirstName = "John";
             Console.WriteLine("Account = " + account);
             Console.WriteLine("new Account = " + clonedAccout);
+
+
+            Account clonedAccout2 = (Account) clonedAccout.Clone();
+            clonedAccout2.Balance = 300000;
+            Console.WriteLine("clonde1 Account = " + clonedAccout);
+            Console.WriteLine("clonde2 Account = " + clonedAccout2);
+
+
             //it's possible that account be another IAccount 
 
         }
