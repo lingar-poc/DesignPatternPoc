@@ -49,6 +49,7 @@
     <Compile Include="app\Owner.cs" />
     <Compile Include="app\Product.cs" />
     <Compile Include="app\Store.cs" />
+    <Compile Include="app\TransferFacade.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

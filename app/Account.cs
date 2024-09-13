@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DesignPatternPoc.app;
 
 namespace c_sharp_apps_Akiva_Cohen.bank_app
 {
@@ -13,15 +14,17 @@ namespace c_sharp_apps_Akiva_Cohen.bank_app
         private int overdraft;
         private const double MAX_OVERDRAFT = 90_000;
 
+        public double Balance { get => balance; set => balance = value; }
+
         public Account(Owner owner, double balance, int overdraft)
         {
             this.owner = owner;
-            this.balance = balance;
+            this.Balance = balance;
             SetOverdraft(overdraft);
         }
 
         public Owner GetOwner() { return owner; }
-        public double GetBalance() { return balance; }
+        public double GetBalance() { return Balance; }
         public int GetOverdraft() { return overdraft; }
 
         public void SetOverdraft(int overdraft)
@@ -34,22 +37,23 @@ namespace c_sharp_apps_Akiva_Cohen.bank_app
 
         public override string ToString()
         {
-            return $"Account: [owner= {owner}, balance = {balance}, overdraft = {overdraft}]";
+            return $"Account: [owner= {owner}, balance = {Balance}, overdraft = {overdraft}]";
         }
 
 
         public void TransferMoney(Account other, int amount)
         {
+            //Console.WriteLine("Action of checking your id...");
 
+            //Console.WriteLine("Action of checking the other account validation");
 
-            Console.WriteLine("Action of checking your id...");
+            //Console.WriteLine("Check balance");
 
-            Console.WriteLine("Action of checking the other account validation");
-
-            Console.WriteLine("Check balance");
-
-            balance -= amount;
-            other.balance += balance;
+            //from.Balance -= amount;
+            //to.Balance += amount;
+            TransferFacade facade = new TransferFacade();
+            facade.Transfer(this, other, amount);
+          
         }
 
         //public void Deposit(double amount) { this.balance += amount; }
