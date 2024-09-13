@@ -37,6 +37,18 @@ namespace c_sharp_apps_Akiva_Cohen.bank_app
             return $"Account: [owner= {owner}, balance = {balance}, overdraft = {overdraft}]";
         }
 
+
+        public void TransferMoney(Account other, int amount)
+        {
+
+
+            Console.WriteLine("Action of checking your id...");
+
+            Console.WriteLine("Action of checking the other account validation");
+
+            Console.WriteLine("Check balance");
+        }
+
         //public void Deposit(double amount) { this.balance += amount; }
         //public void Withdraw(double amount)
         //{
