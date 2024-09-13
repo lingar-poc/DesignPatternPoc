@@ -47,6 +47,9 @@ namespace c_sharp_apps_Akiva_Cohen.bank_app
             Console.WriteLine("Action of checking the other account validation");
 
             Console.WriteLine("Check balance");
+
+            balance -= amount;
+            other.balance += balance;
         }
 
         //public void Deposit(double amount) { this.balance += amount; }
