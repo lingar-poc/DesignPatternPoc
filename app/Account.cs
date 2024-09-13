@@ -13,6 +13,17 @@ namespace c_sharp_apps_Akiva_Cohen.bank_app
         private int overdraft;
         private const double MAX_OVERDRAFT = 90_000;
 
+
+
+        //Copying constructor
+        public Account(Account account)
+        {
+            //todo here the cloning
+            this.owner = account.Owner;//u can do it deep. 
+            // Owner other = new Owner(owner.GetFirstName(), owner.GetLastName());
+            this.balance = account.Balance;
+            //...
+        }
         public Owner Owner { get => owner; set => owner = value; }
         public double Balance { get => balance; set => balance = value; }
         public int Overdraft { get => overdraft; set => overdraft = value; }
@@ -47,6 +58,7 @@ namespace c_sharp_apps_Akiva_Cohen.bank_app
         public object Clone()
         {
             Account account = new Account();
+            //for doing it deep u need to create new owner
             account.owner = owner;
             account.balance = balance;
             //return account;
@@ -54,6 +66,22 @@ namespace c_sharp_apps_Akiva_Cohen.bank_app
 
 
             //throw new NotImplementedException();
+        }
+
+
+        //Copy only the direct properties without cloning the references 
+        public Account ShallowCopy()
+        {
+           return (Account)MemberwiseClone();
+        }
+        public Account DeepCopy()
+        {
+            Account account = (Account)MemberwiseClone();
+
+            Owner other = new Owner(owner.GetFirstName(), owner.GetLastName());
+            account.Owner = other;
+
+            return account;
         }
 
         //public void Deposit(double amount) { this.balance += amount; }

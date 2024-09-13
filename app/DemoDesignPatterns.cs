@@ -34,6 +34,33 @@ namespace DesignPatternPoc.app
             clonedAccout2.Balance = 300000;
             Console.WriteLine("clonde1 Account = " + clonedAccout);
             Console.WriteLine("clonde2 Account = " + clonedAccout2);
+            clonedAccout2.Owner.FirstName = "Moshe";
+
+            Console.WriteLine("Account = " + account);
+            Console.WriteLine("clonde1 Account = " + clonedAccout);
+            Console.WriteLine("clonde2 Account = " + clonedAccout2);
+
+
+            Account cloned3 = clonedAccout2.ShallowCopy();
+
+            cloned3.Overdraft = 20;
+            owner.LastName = "ABC";
+            Console.WriteLine("clonde1 Account = " + clonedAccout);
+            Console.WriteLine("clonde2 Account = " + clonedAccout2);
+            Console.WriteLine("clonde3 Account = " + cloned3);
+            Account cloned4 = cloned3.DeepCopy();
+            cloned4.Overdraft = 10;
+            cloned4.Owner.FirstName = "New";
+            Console.WriteLine("After deep clone");
+            Console.WriteLine("clonde1 Account = " + clonedAccout);
+            Console.WriteLine("clonde2 Account = " + clonedAccout2);
+            Console.WriteLine("clonde3 Account = " + cloned3);
+            Console.WriteLine("cloned4 Account = " + cloned4);
+
+            Account cloned5 = new Account(cloned4);//another way to cloning. 
+
+
+
 
 
             //it's possible that account be another IAccount 
