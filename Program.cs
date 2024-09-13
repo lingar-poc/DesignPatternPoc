@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DesignPatternPoc.app;
 
 namespace DesignPatternPoc
 {
@@ -12,6 +13,7 @@ namespace DesignPatternPoc
         {
 
             Console.WriteLine("Design patterns");
+            DemoDesignPatterns.Demo();
         }
     }
 }

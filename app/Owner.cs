@@ -13,16 +13,19 @@ namespace c_sharp_apps_Akiva_Cohen.bank_app
 
         public Owner(string firstName, string lastName)
         {
-            this.firstName = firstName;
-            this.lastName = lastName;
+            this.FirstName = firstName;
+            this.LastName = lastName;
         }
 
-        public string GetFirstName() { return this.firstName; }
-        public string GetLastName() { return this.lastName; }
+        public string FirstName { get => firstName; set => firstName = value; }
+        public string LastName { get => lastName; set => lastName = value; }
+
+        public string GetFirstName() { return this.FirstName; }
+        public string GetLastName() { return this.LastName; }
 
         public override string ToString()
         {
-            return $"Owner:[firstName={firstName}, lastName={lastName}";
+            return $"Owner:[firstName={FirstName}, lastName={LastName}";
         }
     }
 }
