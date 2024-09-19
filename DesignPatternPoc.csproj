@@ -46,8 +46,10 @@
   <ItemGroup>
     <Compile Include="app\Account.cs" />
     <Compile Include="app\DemoDesignPatterns.cs" />
+    <Compile Include="app\ObjectPoolPattern.cs" />
     <Compile Include="app\Owner.cs" />
     <Compile Include="app\Product.cs" />
+    <Compile Include="app\PublicBankComputer.cs" />
     <Compile Include="app\Store.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
