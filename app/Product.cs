@@ -3,25 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using c_sharp_apps_Akiva_Cohen.bank_app;
 
 namespace DesignPatternPoc.app
 {
     public class Product
     {
         private string name;
+        private Package package;
         private double price;
-        private string description;
-        private bool inStock;
+        private Manufacturer manufacturer;
+       
 
-        public string Name { get => name; set => name = value; }
-        public double Price { get => price; set => price = value; }
-        public string Description { get => description; set => description = value; }
-        public bool InStock { get => inStock; set => inStock = value; }
+        
 
         public override string ToString()
         {
-            return $"Product:[name = {name}, price = {price}" +
-                $", description={description}, inStock={inStock}";
+            return $"Product:[name = {name}, price = {price}";
+              
         }
     }
 }

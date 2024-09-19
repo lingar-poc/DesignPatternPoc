@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace c_sharp_apps_Akiva_Cohen.bank_app
 {
-    public class Owner
+    public class Manufacturer
     {
         private string firstName;
         private string lastName;
 
-        public Owner(string firstName, string lastName)
+        public Manufacturer(string firstName, string lastName)
         {
             this.firstName = firstName;
             this.lastName = lastName;

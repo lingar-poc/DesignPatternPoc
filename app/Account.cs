@@ -8,19 +8,19 @@ namespace c_sharp_apps_Akiva_Cohen.bank_app
 {
     public class Account
     {
-        private Owner owner;
+        private Manufacturer owner;
         private double balance;
         private int overdraft;
         private const double MAX_OVERDRAFT = 90_000;
 
-        public Account(Owner owner, double balance, int overdraft)
+        public Account(Manufacturer owner, double balance, int overdraft)
         {
             this.owner = owner;
             this.balance = balance;
             SetOverdraft(overdraft);
         }
 
-        public Owner GetOwner() { return owner; }
+        public Manufacturer GetOwner() { return owner; }
         public double GetBalance() { return balance; }
         public int GetOverdraft() { return overdraft; }
 
