@@ -12,7 +12,7 @@ namespace DesignPatternPoc.app
         private double balance;
         private int overdraft;
         private const double MAX_OVERDRAFT = 90_000;
-
+        public Account() { }
         public Account(Owner owner, double balance, int overdraft)
         {
             this.owner = owner;
