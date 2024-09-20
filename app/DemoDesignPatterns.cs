@@ -11,6 +11,9 @@ namespace DesignPatternPoc.app
         public static void Demo()
         {
             Console.WriteLine("Demo design pattern");
+
+            Product bisli = new BisliBuilder().Build();
+            Console.WriteLine("Bisli = " + bisli);
         }
     }
 }

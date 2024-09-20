@@ -13,13 +13,16 @@ namespace DesignPatternPoc.app
         private Package package;
         private double price;
         private Manufacturer manufacturer;
-       
 
-        
+        public string Name { get => name; set => name = value; }
+        public Package Package { get => package; set => package = value; }
+        public double Price { get => price; set => price = value; }
+        public Manufacturer Manufacturer { get => manufacturer; set => manufacturer = value; }
 
         public override string ToString()
         {
-            return $"Product:[name = {name}, price = {price}";
+            return $"Product:[name = {Name}, price = {Price}, Manufacturer = {Manufacturer} " +
+                $"package = {Package.Material}";
               
         }
     }

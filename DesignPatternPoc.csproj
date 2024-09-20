@@ -45,7 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="app\Account.cs" />
+    <Compile Include="app\ConcreteBuilders.cs" />
     <Compile Include="app\DemoDesignPatterns.cs" />
+    <Compile Include="app\IProductBuilder.cs" />
     <Compile Include="app\Manufacturer.cs" />
     <Compile Include="app\Package.cs" />
     <Compile Include="app\Product.cs" />

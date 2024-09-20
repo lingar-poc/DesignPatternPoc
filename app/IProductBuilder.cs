@@ -9,10 +9,14 @@ namespace DesignPatternPoc.app
 {
     public interface IProductBuilder
     {
+
+        void Reset();
         void BuildName();
         void BuildPackage();
         void BuildPrice();
         void BuildManufacture();
+
+        Product Build();
 
 
 
